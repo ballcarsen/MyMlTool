@@ -13,6 +13,9 @@ export default function Navigation() {
                 <Link href="/">
                     <a className={styles.link}>Visualize</a>
                 </Link>
+                <Link href="/user">
+                    <a className={styles.link}>User</a>
+                </Link>
             </nav>
     )
 }
