@@ -24,9 +24,9 @@ def get_uploads(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.Upload).offset(skip).limit(limit).all()
 
 
-def create_user_upload(db: Session, upload: schemas.UploadCreate, user_id: int):
-    db_item = models.Upload(**upload.dict(), user_id=user_id)
+def create_user_upload(db: Session, upload: schemas.UploadCreate):
+    db_item = models.Upload(**upload.dict())
     db.add(db_item)
     db.commit()
     db.refresh(db_item)
-    return db_item
+    return db_item.upload_id

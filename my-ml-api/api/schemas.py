@@ -4,7 +4,8 @@ from pydantic import BaseModel
 
 
 class UploadBase(BaseModel):
-    file_location: str
+    file_name: str
+    user_id: int
 
 
 class UploadCreate(UploadBase):
@@ -13,7 +14,6 @@ class UploadCreate(UploadBase):
 
 class Upload(UploadBase):
     upload_id: int
-    user_id: int
 
     class Config:
         orm_mode = True

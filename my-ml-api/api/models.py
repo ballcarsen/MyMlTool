@@ -18,7 +18,7 @@ class Upload(Base):
     __tablename__ = "uploads"
 
     upload_id = Column(Integer, primary_key=True, index=True)
-    file_location = Column(String)
+    file_name = Column(String)
     user_id = Column(Integer, ForeignKey("users.user_id"))
 
     user = relationship("User", back_populates="uploads")

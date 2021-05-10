@@ -49,18 +49,14 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
     return db_user
 
 
-@app.post("/users/{user_id}/uploads/", response_model=schemas.Upload)
-def create_upload_for_user(
-    user_id: int, upload: schemas.UploadCreate, db: Session = Depends(get_db)
-):
-    return upload_service.create_user_upload(db=db, upload=upload, user_id=user_id)
+@app.post("/upload")
+async def create_upload_file(file: UploadFile = File(...), db: Session = Depends(get_db)):
+    upload = schemas.UploadCreate(file_name=file.filename, user_id=1)
 
-@app.post("/uploadfile/")
-async def create_upload_file(upload_id: int, file: UploadFile = File(...)):
-    return {"filename": upload_service.upload_file(upload_id, file)}
+    return {"upload_id": upload_service.upload_file(db, upload, file)}
 
 
 @app.get("/uploads/", response_model=List[schemas.Upload])
 def read_uploads(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    uploads = crud.get_get_uploadstems(db, skip=skip, limit=limit)
+    uploads = crud.get_uploads(db, skip=skip, limit=limit)
     return uploads
