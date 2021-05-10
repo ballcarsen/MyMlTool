@@ -1,0 +1,6 @@
+.user {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    height: 30px
+}

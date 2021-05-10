@@ -12,6 +12,19 @@ a {
   text-decoration: none;
 }
 
+p {
+  padding: 5px;
+}
+
 * {
   box-sizing: border-box;
+}
+
+input {
+  margin: 5px;
+}
+
+form {
+  display: inline-flex;
+  flex-direction: column;
 }

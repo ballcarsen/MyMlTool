@@ -1,15 +1,19 @@
-import Navigation from "../components/navigation"
-import styles from '../styles/Upload.module.css'
+import Navigation from '../components/navigation'
+import FileSelect from '../components/fileSelect'
+import styles from '../styles/Common.module.css'
 
 export default function Upload() {
     return (
-        <div className={styles.container}>
+        <div>
             <Navigation></Navigation>
-            <main className={styles.main}>
+            <div className={styles.columnside}></div>
+            <div className={styles.columnmiddle}>
                 <h1>
                     Upload Data
                 </h1>
-            </main>
+                <FileSelect></FileSelect>
+            </div>
+            <div className={styles.columnside}></div>
         </div>
     )
 }

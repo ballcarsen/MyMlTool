@@ -1,8 +1,8 @@
 import useSWR from 'swr'
-import styles from '../styles/Upload.module.css'
+import styles from '../styles/Common.module.css'
 import Navigation from '../components/navigation'
 import UserForm from '../components/userForm'
-import UserDisplay from '../components/user-display'
+import UserDisplay from '../components/userDisplay'
 
 const fetcher = url => fetch(url).then(res => res.json());
 
@@ -15,16 +15,22 @@ function User() {
     return (
         <div className={styles.container}>
             <Navigation></Navigation>
-            <main className={styles.main}>
-                
-            {data.map(function(d, idx){
-                return (
-                    <UserDisplay user={d} key={d.user_id} /> 
-                )
-            })}
+            <div className={styles.columnside}>
+                <UserForm></UserForm>
+            </div>
+            <div className={styles.columnmiddle}>
+            
+            <div className={styles.display}>  
+                {data.map(function(d, idx){
+                    return (
+                        <UserDisplay user={d} key={d.user_id} /> 
+                    )
+                })}
+            </div>
 
-            </main>
-            <UserForm></UserForm>
+            </div>
+            <div className={styles.columnside}></div>
+
         </div>
     )
 }

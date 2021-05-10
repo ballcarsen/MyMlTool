@@ -1,3 +1,5 @@
+import styles from '../styles/Form.module.css'
+
 function UserForm() {
   const registerUser = async event => {
     event.preventDefault()
@@ -15,19 +17,20 @@ function UserForm() {
     })
 
     const result = await res.json()
-    // result.user => 'Ada Lovelace'
   }
 
   return (
-    <form onSubmit={registerUser}>
-    <label htmlFor="first_name">First Name</label>
-    <input id="first_name" name="first_name" type="text" required />
-    <label htmlFor="last_name">Last Name</label>
-    <input id="last_name" name="last_name" type="text" required />
-    <label htmlFor="password">Password</label>
-    <input id="password" name="password" type="text" required />
-    <button type="submit">Register</button>
-    </form>
+    <div className={styles.container}>
+      <form onSubmit={registerUser}>
+        <label htmlFor="first_name">First Name</label>
+        <input id="first_name" name="first_name" type="text" required />
+        <label htmlFor="last_name">Last Name</label>
+        <input id="last_name" name="last_name" type="text" required />
+        <label htmlFor="password">Password</label>
+        <input id="password" name="password" type="text" required />
+        <button type="submit">Register</button>
+      </form>
+    </div>
   )
 }
 
