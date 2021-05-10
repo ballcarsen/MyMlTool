@@ -1,5 +1,6 @@
 import Navigation from '../components/navigation'
 import FileSelect from '../components/fileSelect'
+import UploadList from '../components/uploadList'
 import styles from '../styles/Common.module.css'
 
 export default function Upload() {
@@ -12,6 +13,7 @@ export default function Upload() {
                     Upload Data
                 </h1>
                 <FileSelect></FileSelect>
+                <UploadList></UploadList>
             </div>
             <div className={styles.columnside}></div>
         </div>
