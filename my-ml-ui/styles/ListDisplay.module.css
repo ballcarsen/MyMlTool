@@ -1,0 +1,13 @@
+.content {
+    margin: 5px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.table {
+    max-width: 50%;
+}

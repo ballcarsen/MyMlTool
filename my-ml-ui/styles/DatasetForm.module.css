@@ -1,0 +1,25 @@
+.container{
+    margin-top: 100px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 60%;
+    border: black;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 5px;
+}
+
+.label {
+    float: left;
+    text-align:  center;
+}
+
+.input {
+    float:right;
+}
+
+.inputRow {
+    width: 100%;
+    display: inline-flex;
+    flex-direction:  row;
+}

@@ -6,6 +6,15 @@
 
 .columnmiddle {
   float: left;
-  padding: 10px;
   width: 50%;
+  text-align: center;
+}
+
+.rowFlex {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.mainHeader {
+  padding-top: 300px;
 }

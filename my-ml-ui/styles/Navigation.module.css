@@ -1,7 +1,8 @@
 .nav {
-    background-color: rgb(133, 79, 165);
-    color: black;
+    background-color: black;
+    color: white;
     position: sticky;
+    font-weight: bold;
     z-index: 1;
     width: 100%;
     padding: 14px 16px;
@@ -10,6 +11,28 @@
     overflow: hidden;
 }
 
+.centerLinks {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.sideLinks {
+    float: left;
+    width: 25%;
+}
+
 .link {
-    padding: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.linkLeft {
+    float: left;
+    margin-left: 20px;
+}
+
+.linkRight {
+    float: right;
+    margin-right: 20px
 }

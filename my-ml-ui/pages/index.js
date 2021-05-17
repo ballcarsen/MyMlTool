@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Link from 'next/link'
 import { Component } from 'react'
 import styles from '../styles/Common.module.css'
 import Navigation from '../components/navigation'
@@ -18,12 +18,15 @@ export default function Home() {
       </div>
       <div className={styles.columnmiddle}>
         <div>
-          <h1>
+          <h1 className={styles.mainHeader}>
               My ML
           </h1>
-          <p>
-              A tool to explore data and build predictive models.
+          <p style={{padding: 50 + "px"}}>
+            A comprehensive tool to simplify the storage and retrieval of data sets, data visualization and creation of machine learning workflows.
           </p>
+          <button type="button" href="/datasets">
+            <Link href="/datasets"><a>Get Started!</a></Link>
+          </button>
         </div>
       </div>
       <div className={styles.scolumnside}>

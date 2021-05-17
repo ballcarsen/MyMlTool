@@ -1,21 +1,22 @@
 import Navigation from '../components/navigation'
-import FileSelect from '../components/fileSelect'
-import UploadList from '../components/uploadList'
+import DatasetForm from '../components/datasetForm'
+import DatasetList from '../components/datasetList'
 import styles from '../styles/Common.module.css'
 
-export default function Upload() {
+export default function Datasets() {
     return (
         <div>
             <Navigation></Navigation>
             <div className={styles.columnside}></div>
             <div className={styles.columnmiddle}>
                 <h1>
-                    Upload Data
+                    Datasets
                 </h1>
-                <FileSelect></FileSelect>
-                <UploadList></UploadList>
+                <DatasetForm></DatasetForm>
             </div>
-            <div className={styles.columnside}></div>
+            <div className={styles.columnside}>
+                <DatasetList></DatasetList>
+            </div>
         </div>
     )
 }
