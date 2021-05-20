@@ -25,14 +25,17 @@
 .link {
     margin-left: 60px;
     margin-right: 60px;
+    color: white;
 }
 
 .linkLeft {
     float: left;
     margin-left: 20px;
+    color: white;
 }
 
 .linkRight {
     float: right;
-    margin-right: 20px
+    margin-right: 20px;
+    color: white;
 }

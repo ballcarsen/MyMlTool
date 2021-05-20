@@ -1,5 +1,4 @@
-import styles from '../styles/Common.module.css'
-import formStyles from '../styles/DatasetForm.module.css'
+import styles from '../styles/DatasetForm.module.css'
 
 export default function DatasetForm() {
 
@@ -23,24 +22,21 @@ export default function DatasetForm() {
 
     return (
 
-        <div className={formStyles.container}>
+        <div className={styles.container}>
             <h2>Create a New Dataset!</h2>
             <form>
-                <div className={formStyles.inputRow}>
-                    <label className={formStyles.label} for='name'>Name</label>
-                    <input className={formStyles.input} type='text' name='name'/>
+                <div className={styles.grid}>
+                        <label className={styles.label} for='name'>Name</label>
+                        <input className={styles.input} type='text' name='name'/>
+                        <label className={styles.label} for='type'>Type</label>
+                        <input className={styles.input} type='text' name='type'/>
+                        <label className={styles.label} for='file'>CSV</label>
+                        <input className={styles.input} type='file' name='file' onChange={updateSelectedFile}/>
                 </div>
-                <div className={formStyles.inputRow}>
-                    <label className={formStyles.label} for='type'>Type</label>
-                    <input className={formStyles.input} type='text' name='type'/>
-                </div>
-                <div className={formStyles.inputRow}>
-                    <label className={formStyles.label} for='file'>CSV</label>
-                    <input className={formStyles.input} type='file' name='file' onChange={updateSelectedFile}/>
-                </div>
-                <button id='upload' onClick={postUpload} disabled={true}>Upload</button>
             </form>
+            <div>
+                <button className={styles.button} id='upload' onClick={postUpload} disabled={true}>Upload</button>
+            </div>
         </div>
-    
     )
 }

@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import styles from '../styles/ListDisplay.module.css'
+import styles from '../styles/DatasetList.module.css'
 import DatasetListItem from './datasetListItem'
 
 const fetcher = url => fetch(url).then(res => res.json());

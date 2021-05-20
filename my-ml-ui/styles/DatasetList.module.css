@@ -1,0 +1,14 @@
+.content {
+    margin: 5px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 215px;
+}
+
+.table {
+    max-width: 50%;
+}
